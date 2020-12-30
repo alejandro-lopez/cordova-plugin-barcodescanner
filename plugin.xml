@@ -11,7 +11,6 @@
   <repo>https://github.com/phonegap/phonegap-plugin-barcodescanner</repo>
   <issue>https://github.com/phonegap/phonegap-plugin-barcodescanner/issues</issue>
   <engines>
-    <engine name="cordova" version=">=10.0.0"/>
     <engine name="cordova-android" version=">=9.0.0"/>
   </engines>
   <js-module src="www/barcodescanner.js" name="BarcodeScanner">
