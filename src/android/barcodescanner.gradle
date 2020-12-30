@@ -1,28 +1,12 @@
-buildscript {
-    repositories {
-        jcenter()
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:+'
-        classpath 'com.google.gms:google-services:4.0.0'
-    }
-}
-
 repositories{
     jcenter()
     flatDir{
         dirs 'libs'
     }
-    mavenCentral()
-    maven {
-      url "https://maven.google.com"
-    }
 }
 
 dependencies {
     compile(name:'barcodescanner-release-2.1.7', ext:'aar')
-    compile "com.google.firebase:firebase-core:16.0.8"
 }
 
 android {
@@ -31,19 +15,3 @@ android {
         exclude 'META-INF/LICENSE'
     }
 }
-
-ext.postBuildExtras = {
-    android {
-        compileOptions {
-            sourceCompatibility JavaVersion.VERSION_1_8
-            targetCompatibility JavaVersion.VERSION_1_8
-        }
-        allprojects {
-            compileOptions {
-                sourceCompatibility = JavaVersion.VERSION_1_8
-                targetCompatibility = JavaVersion.VERSION_1_8
-            }
-        }
-    }
-}
-apply plugin: com.google.gms.googleservices.GoogleServicesPlugin
